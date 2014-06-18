@@ -72,7 +72,7 @@
                             </a>
                             <a href="https://taskforce.is">
                                 <img src="img/logo-taskforce.png" alt="taskforce"/>
-                            </a>                        
+                            </a>
                         </div>
                         <div class="page-scroll">
                             <a href="#about" class="btn btn-circle">
@@ -130,6 +130,29 @@
             <div class="col-lg-8 col-lg-offset-2">
                 <h2>Call Now: It only takes 2 minutes</h2>
                 <p>Enter your phone number below and we'll call and connect you to your representatives, and you can tell them to support the two amendments tomorrow.</p>
+                
+                <div id="tf-call-widget-container">
+                  <div id="tf-call-widget-form">
+                    <h5>Call Your Legislators</h5>
+                    <form method="get" action="https://call-congress.taskforce.is/create" id="tf-call-tool" role="form">
+                        <label for="tf-phone-number" id="tf-phone-number-label">Phone Number</label>
+                        <input type="text" id="tf-phone-number">
+                        <input id="tf-submit" type="Submit" data-waiting-text="Calling Now" value="Call Now">
+                    </form>
+                  </div>
+                  <div id="tf-call-widget-success" style="display: none;">
+                    <h5>What to say</h5>
+                       <p>Hi, I'm one of Representative/Senator _______'s constituents, and I'm calling  to oppose Fast Track for the Trans-Pacific Partnership agreement. Congress needs time to debate and amend trade agreements that affect all of us. Fast Tracking the TPP is undemocratic, and I expect my lawmakers to oppose it. I'll be watching this issue closely in 2014.</p>
+                      <p><strong>You can press * at any time to hang up and call the next representative.</strong></p>
+                      <p id="tf-reset">Call didn't come through? Try again.</p>
+                    </div>
+                    <span id="tf-error-text"></span>
+                  </div>
+                <script>
+                  var tforce_config = {
+                    campaign: 'lofgren-nsa-dial'
+                  };
+                </script>
                 <ul class="list-inline banner-social-buttons">
                     <li><a href="" class="btn btn-default btn-lg"><i class="icon-twitter"></i> <span class="network-name">Share on Twitter</span></a>
                     </li>
@@ -158,6 +181,7 @@
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 
+    <script type="text/javascript" src="js/call-widget.js"></script>
     <!-- Custom Theme JavaScript -->
     <script src="js/grayscale.js"></script>
 
