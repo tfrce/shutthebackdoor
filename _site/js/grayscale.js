@@ -176,6 +176,7 @@ if (!Object.keys) {
         });
       }
     }
+    /*
 $(document).ready(function(){
    var $form = $('.email-signup');
 
@@ -210,15 +211,5 @@ $(document).ready(function(){
       });
       return false;
    });
-    /*
-
-    var spans = label.getElementsByTagName('span');
-    var link = label.getElementsByTagName('a')[0];
-    spans[0].innerHTML = referalOrg.name;
-    spans[1].innerHTML = referalOrg.name;
-    link.href = referalOrg.policy;
-    checkbox.onchange = function(e) {
-        hiddenInput.value = checkbox.checked ? referalOrg.name : '';
-    };
-    */
 })();
+*/
