@@ -2,6 +2,6 @@ stop-internet-surveillance
 ==========================
 
 - Run 'bundle install'
-- run 'watch-less -c -d css' in one terminal window
-- run 'jekyll serve --wath' in another
+- Set up something to convert grayscale.less to grayscale.css
+- run 'jekyll serve --wath' in terminal
 - go to http://localhost:4000
