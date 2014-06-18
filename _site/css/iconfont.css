@@ -1,0 +1,131 @@
+@font-face {
+	font-family: 'icomoon';
+	src:url('../fonts/icomoon.eot?-x940sc');
+	src:url('../fonts/icomoon.eot?#iefix-x940sc') format('embedded-opentype'),
+		url('../fonts/icomoon.woff?-x940sc') format('woff'),
+		url('../fonts/icomoon.ttf?-x940sc') format('truetype'),
+		url('../fonts/icomoon.svg?-x940sc#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	position: relative;
+	top: 1px;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-facebook-square:before {
+	content: "\f082";
+}
+.icon-twitter:before {
+	content: "\f099";
+}
+.icon-facebook:before {
+	content: "\f09a";
+}
+.icon-github:before {
+	content: "\f09b";
+}
+.icon-google-plus-square:before {
+	content: "\f0d4";
+}
+.icon-angle-double-down:before {
+	content: "\f103";
+}
+.icon-exit:before {
+	content: "\e604";
+}
+.icon-bars:before {
+	content: "\f0c9";
+}
+
+
+#share-buttons {
+		height: 100px;
+}
+#share-buttons a {
+		margin:4px;
+		width:54px;
+		height:54px;
+		z-index: 0;
+		margin-top: 40px;
+}
+.sicon {
+		float: left;
+		width:54px;
+		height:54px;
+		background-color:black;
+		background-image: url("../img/social-icons.png");
+}
+#share-buttons .sicon {
+		margin-top: 2px;
+
+}
+#sfb {
+		background-position:70% 0 ;
+}
+
+#sfb:hover {
+		opacity:0.8;
+}
+
+#stwit {
+		background-position:50% 0 ;
+}
+
+#stwit:hover {
+		opacity:0.8;
+}
+
+#sgplus{
+		background-position:20% 0 ;
+}
+#sgplus:hover{
+		opacity:0.8;
+}
+
+.social-count {
+		display: inline-block;
+		position: relative;
+}
+
+.social-count:after {
+		background: #fff;
+		border: 1px solid #efefef;
+		border-radius: 2px;
+		top: -36px;
+		color: #444;
+		content: attr(count);
+		display: block;
+		left: 0px;
+		width: 54px;
+		padding: 5px;
+		text-align: center;
+		position: absolute;
+		text-shadow: 0 1px 0 #000;
+		white-space: nowrap;
+}
+
+.social-count:before {
+		border: solid;
+		border: 1px solid #fff;
+		border-color: #111 transparent;
+		border-color: #fff transparent;
+		border-width: .4em .4em 0 .4em;
+		top: -4px;
+		content: "";
+		display: block;
+		left: 22px;
+		position: absolute;
+}
