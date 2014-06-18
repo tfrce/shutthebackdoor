@@ -83,6 +83,10 @@ $(document).ready(function(){
       'dp': {
           name: 'Demand Progress',
           policy: 'http://www.demandprogress.org/privacy/'
+      },
+      'fp': {
+          name: 'Free Press',
+          policy: 'http://www.freepress.net/privacy-copyright'
       }
   };
   var referalKeys = Object.keys(referalMap);
