@@ -142,6 +142,7 @@
     if(typeof zipCode !== 'undefined') {
       url += '&zipcode=' + zipCode;
     }
+    $('.reset-message').fadeIn(2000);
     $.ajax({
       url: url,
       type: 'GET',
@@ -149,17 +150,17 @@
       crossDomain: true,
       success: function (res) {
         if(res.message !== 'queued') {
-          $('#tf-error-text').text(res.message);
+          //$('#tf-error-text').text(res.message);
         } else {
-          $('#tf-call-widget-form').hide();
-          $('#tf-call-widget-success').show();
+          //$('#tf-call-widget-form').hide();
+          //$('#tf-call-widget-success').show();
         }
-        zipCodeEl.removeAttr('disabled');
-        phoneNumberEl.removeAttr('disabled');
-        submitEl.removeAttr('disabled').val(submitText);
+        //zipCodeEl.removeAttr('disabled');
+        //phoneNumberEl.removeAttr('disabled');
+        //submitEl.removeAttr('disabled').val(submitText);
       },
       error: function () {
-        
+
         $('#tf-error-text').text('An Unknown error happened');
         zipCodeEl.removeAttr('disabled');
         phoneNumberEl.removeAttr('disabled');
@@ -169,12 +170,14 @@
     return false;
   });
   $('body').on('click', '#tf-reset', function (ev){
-    $('#tf-zip-code').val('');
-    $('#tf-phone-number').val('');
-    $('#tf-call-widget-form').show();
-    $('#tf-call-widget-success').hide();
+    $('#tf-phone-number').val('').removeAttr('disabled');
+    $('#tf-submit').removeAttr('disabled');
+    $('#tf-submit').val('Call Now');
+    //$('#tf-call-widget-form').show();
+    //$('#tf-call-widget-success').hide();
+    $('.reset-message').hide();
     $('#tf-phone-number').focus();
-
+    return false;
   });
 
 });
