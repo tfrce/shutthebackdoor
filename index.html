@@ -121,7 +121,7 @@
                             <p>This is untrue. What happens is money wins when people never complain (to their legislators!).</p>
                         </blockquote>
 
-                        <p class="text-left"><strong>- An ex-congressional employee (<a href="http://www.reddit.com/r/blog/comments/25gszl/only_you_can_protect_net_neutrality/chh0u6p">link</a>)</strong></p>
+                        <p class="text-left"><strong>- An ex-congressional employee</strong> (<a href="http://www.reddit.com/r/blog/comments/25gszl/only_you_can_protect_net_neutrality/chh0u6p">link</a>)</p>
                     <a href="" class="btn btn-default btn-huge">Call now</a>
                 </div>
             </div>
@@ -147,15 +147,20 @@
 
                 <div id="tf-call-widget-container">
                   <div id="tf-call-widget-form">
+
+
+                    <h4>What to say</h4>
+                       <blockquote>Hi, I'm one your constituents, and I'm calling to urge you to support Rep. Lofgren’s amendment to the 2015 Department of Defense Appropriations Bill, H.R. 4870. Rep. Lofgren’s amendment makes significant strides towards addressing out of control NSA spying, and helps restore trust in the Internet and American products. Please vote yes on this amendment, and urge your colleagues to join you.</blockquote>
+
                     <form method="get" action="https://call-congress.taskforce.is/create" id="tf-call-tool" role="form">
-                        <label for="tf-phone-number" id="tf-phone-number-label">Phone Number</label>
-                        <input type="text" id="tf-phone-number">
-                        <input id="tf-submit" type="Submit" data-waiting-text="Calling Now" value="Call Now">
+                        <div class="form-group">
+                            <label for="tf-phone-number" id="tf-phone-number-label" class="sr-only">Phone Number</label>
+                            <input type="text" class="form-control input-lg" id="tf-phone-number" placeholder="Your phone number">
+                        </div>
+                        <input id="tf-submit" class="btn btn-default btn-huge" type="Submit"  data-waiting-text="Calling Now" value="Call Now">
                     </form>
-                  </div>
-                  <div id="tf-call-widget-success">
-                    <h5>What to say</h5>
-                       <p>Hi, I'm one of Representative/Senator _______'s constituents, and I'm calling  to oppose Fast Track for the Trans-Pacific Partnership agreement. Congress needs time to debate and amend trade agreements that affect all of us. Fast Tracking the TPP is undemocratic, and I expect my lawmakers to oppose it. I'll be watching this issue closely in 2014.</p>
+
+                  <div id="tf-call-widget-success" style="display: none;">
                       <p><strong>You can press * at any time to hang up and call the next representative.</strong></p>
                       <!--<p id="tf-reset">Call didn't come through? Try again.</p>-->
                     </div>
@@ -167,6 +172,17 @@
                   };
                 </script>
 
+                 <div id="share-buttons">
+                    <a data-network="twitter" href="" count="0" target="_blank" class="twitter-button social-count" >
+                        <div class="sicon" id="stwit"></div>
+                    </a>
+                    <a href="" data-network="facebook" count="0" target="_blank" class="social-count facebook-button">
+                        <div class="sicon" id="sfb"></div>
+                    </a>
+                    <a count="0" href="" data-network="googleplus" target="_blank" class="social-count google-button">
+                      <div class="sicon" id="sgplus"></div>
+                    </a>
+                  </div>
             </div>
         </div>
     </section>
