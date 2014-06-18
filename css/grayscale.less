@@ -40,6 +40,14 @@ p {
     line-height: 1.5;
 }
 
+h4 {
+    margin-bottom: 20px;
+    margin-top: 60px;
+    text-transform: none;
+    font-weight: 400;
+    font-size:24px;
+}
+
 @media(min-width:767px) {
     p {
         margin: 0 0 35px;
@@ -169,7 +177,7 @@ a:focus {
     }
 
     .brand-heading {
-        font-size: 80px;
+        font-size: 60px;
     }
 
     .intro-text {
@@ -275,6 +283,14 @@ a:focus {
     margin-top: 100px;
 }
 
+blockquote p {
+    font-size: 17.5px;
+    text-align:left;
+}
+
+blockquote {
+}
+
 @media(min-width:767px) {
     .content-section {
         padding-top: 250px;
@@ -309,14 +325,15 @@ a:focus {
 
 .btn-default:hover,
 .btn-default:focus {
-    border: 1px solid @primary;
+    border: 2px solid @primary;
     outline: none;
     color: @dark;
     background-color: @primary;
 }
 
 .btn-huge {
-    padding: 25px;
+    border: 2px solid @primary;
+    padding: 25px 10px;
     font-size: 26px;
 }
 
