@@ -39,21 +39,6 @@ $.ajax('https://d28jjwuneuxo3n.cloudfront.net/?networks=facebook,twitter,googlep
     jsonpCallback : 'myCallback'
 });
 
-$( ".facebook-button" ).click(function() {
-    var url = 'https://www.facebook.com/sharer/sharer.php?app_id=709021229138321&u='+$(this).attr("href")+'&display=popup';
-    window.open(url, "Share on Facebook", "width=650,height=500");
-    return false;
-})
-$( ".twitter-button" ).click(function() {
-    var url = 'https://twitter.com/intent/tweet?status=' + $(this).attr("href");
-    window.open(url,"Twitter","width=550,height=420");
-    return false;
-})
-$( ".google-button" ).click(function() {
-    var url = 'https://plus.google.com/share?url=' + $(this).attr("href");
-    window.open(url,"Share on Google Plus","width=500,height=436");
-    return false;
-})
 /* ==========================================================================
    Signup forms
    ==========================================================================*/

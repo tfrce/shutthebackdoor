@@ -100,17 +100,84 @@
         </div>
     </section>
 
+    <section id="call" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+              <div class="share-buttons">
+                 <a data-network="twitter" href="https://twitter.com/intent/tweet?status=A%20critical%20vote%20happening%20TODAY%20in%20Congress%20could%20put%20a%20stop%20to%20backdoor%20Internet%20surveillance.%20-%3E%20https%3A%2F%2Fshutthebackdoor.net&related=eff,tfrce" count="0" target="_blank" class="twitter-button social-count twlinkthis" >
+                     <div class="sicon" id="stwit"></div>
+                 </a>
+                 <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fshutthebackdoor.net%2F&display=popup" data-network="facebook" count="0" target="_blank" class="social-count facebook-button fblinkthis">
+                     <div class="sicon" id="sfb"></div>
+                 </a>
+                 <a count="0" href="https://plus.google.com/share?url=https://shutthebackdoor.net" data-network="googleplus" target="_blank" class="social-count google-button gpluslinkthis">
+                   <div class="sicon" id="sgplus"></div>
+                 </a>
+               </div>
+            <h2>Call Now: It only takes 2 minutes</h2>
+            <p>Enter your phone number below and we'll call and connect you to your representatives, and you can tell them to support the amendment.</p>
+
+            <div id="tf-call-widget-container">
+              <div id="tf-call-widget-form">
+                <h4>What to say</h4>
+                   <blockquote>Hi, I'm one of your constituents, and I'm calling to urge you to support the Massie-Lofgren amendment to the 2015 Department of Defense Appropriations Bill, H.R. 4870. The Massie-Lofgren amendment makes significant strides towards addressing out of control NSA spying, and helps restore trust in the Internet and American products. Please vote yes on this amendment, and urge your colleagues to join you.</blockquote>
+
+                    <form method="get" action="https://call-congress.taskforce.is/create" id="tf-call-tool" role="form">
+                        <div class="form-group">
+                            <label for="tf-phone-number" id="tf-phone-number-label" class="sr-only">Phone Number</label>
+                            <input type="text" class="form-control input-lg" id="tf-phone-number" placeholder="Your phone number">
+                        </div>
+                        <input id="tf-submit" class="btn btn-default btn-huge" type="Submit"  data-waiting-text="Calling Now" value="Call Now">
+                    </form>
+
+                  <div id="tf-call-widget-success" style="display: none;">
+                      <p><strong>You can press * at any time to hang up and call the next representative.</strong></p>
+                      <!--<p id="tf-reset">Call didn't come through? Try again.</p>-->
+                    </div>
+                    <span id="tf-error-text"></span>
+                  </div>
+                    <script>
+                      var tforce_config = {
+                        campaign: 'lofgren-nsa-dial'
+                      };
+                    </script>
+                      <form method="post" action="" class="email-signup" role="form" autocomplete="on">
+                        <fieldset>
+                            <label style="color: #444;" for="userEmail">
+                                Your email
+                            </label>
+                          <input type="text"  placeholder="YOUR EMAIL" name="email"  id="userEmail" x-autocompletetype="email">
+
+
+                          <input type="hidden" class="org-slug" name="org" value="" />
+                          <label style="color: #444;">
+                            Signup for emails from <span class="org-name"></span> (<a class="org-privacy int-privacy-policy-link" href="">privacy policy</a>)
+                          </label>
+
+
+                            <input id="submit" type="submit" value="Take action >>" class="">
+
+                        </fieldset>
+                        <span id="error-text"></span>
+                      </form>
+
+                  </div>
+                </div>
+
+          </div>
+        </section>
+
     <section id="backdoors" class="container content-section text-center">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
                 <h2>What backdoors would be closed?</h2>
 
-                <h4>Backdoor Searches of US Citizen's Internet Usage</h4>
+                <h4>Backdoor Searches of US Citizens' Internet Usage</h4>
                 <p><span class="badge">What's happening:</span> The NSA collects emails, browsing and chat history under Section 702 of the FISA Amendments Act, and searches this information without a warrant for the communications of Americans—a practice known as "backdoor searches."</p>
                 <p><span class="badge fix">The fix:</span> The amendment would block the NSA from using any of its funding from the Defense Appropriations Bill to conduct such warrantless searches. </p>
 
                 <h4>Backdoors in Encryption Standards</h4>
-                <p><span class="badge">What's happening:</span> The NSA has been requesting, and sometimes mandating, that private companies and organizations add backdoors to the encryption standards that are meant to keep you safe on the web. </p>
+                <p><span class="badge">What's happening:</span> The NSA has been requesting that private companies and organizations add backdoors to the encryption standards that are meant to keep you safe on the web. </p>
 
                 <p><span class="badge fix">The fix:</span> The amendment would stop the NSA from using its budget to mandate or request such backdoors.*</p>
 
@@ -134,7 +201,7 @@
                         <h4>Your call makes a difference:</h4>
 
                         <blockquote>
-                            <p>Very few Americans, despite having a country with millions of us, ever call their legislators. 100+ phone calls per office in Congress would blow people's mind. We receive that little contact from people despite each office representing 100,000s+ citizens. This is because so many people drink the kool-aid that they have no power or that money controls everything.</p>
+                            <p>Very few Americans, despite having a country with millions of us, ever call their legislators. 100+ phone calls per office in Congress would blow people's minds. We receive that little contact from people despite each office representing 100,000s+ citizens. This is because so many people drink the kool-aid that they have no power or that money controls everything.</p>
                             <p>This is untrue. What happens is money wins when people never complain (to their legislators!).</p>
                         </blockquote>
 
@@ -144,95 +211,26 @@
             </div>
         </div>
     </section>
-    <section id="call" class="container content-section text-center">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-              <div class="share-buttons">
-                 <a data-network="twitter" href="https://twitter.com/intent/tweet?status=A%20critical%20vote%20happening%20TODAY%20in%20the%20Congress%20could%20put%20a%20stop%20to%20backdoor%20Internet%20surveillance.%20-%3E%20https%3A%2F%2Fshutthebackdoor.net&related=eff,tfrce" count="0" target="_blank" class="twitter-button social-count twlinkthis" >
-                     <div class="sicon" id="stwit"></div>
-                 </a>
-                 <a href=""https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fshutthebackdoor.net%2F&display=popup" data-network="facebook" count="0" target="_blank" class="social-count facebook-button fblinkthis">
-                     <div class="sicon" id="sfb"></div>
-                 </a>
-                 <a count="0" href="https://plus.google.com/share?url=https://shutthebackdoor.net" data-network="googleplus" target="_blank" class="social-count google-button gpluslinkthis">
-                   <div class="sicon" id="sgplus"></div>
-                 </a>
-               </div>
-                <h2>Call Now: It only takes 2 minutes</h2>
-                <p>Enter your phone number below and we'll call and connect you to your representatives, and you can tell them to support the two amendments tomorrow.</p>
-
-
-
-<div id="tf-call-widget-container">
-  <div id="tf-call-widget-form">
-
-
-    <h4>What to say</h4>
-       <blockquote>Hi, I'm one your constituents, and I'm calling to urge you to support Rep. Lofgren’s amendment to the 2015 Department of Defense Appropriations Bill, H.R. 4870. Rep. Lofgren’s amendment makes significant strides towards addressing out of control NSA spying, and helps restore trust in the Internet and American products. Please vote yes on this amendment, and urge your colleagues to join you.</blockquote>
-
-    <form method="get" action="https://call-congress.taskforce.is/create" id="tf-call-tool" role="form">
-        <div class="form-group">
-            <label for="tf-phone-number" id="tf-phone-number-label" class="sr-only">Phone Number</label>
-            <input type="text" class="form-control input-lg" id="tf-phone-number" placeholder="Your phone number">
-        </div>
-        <input id="tf-submit" class="btn btn-default btn-huge" type="Submit"  data-waiting-text="Calling Now" value="Call Now">
-    </form>
-
-  <div id="tf-call-widget-success" style="display: none;">
-      <p><strong>You can press * at any time to hang up and call the next representative.</strong></p>
-      <!--<p id="tf-reset">Call didn't come through? Try again.</p>-->
-    </div>
-    <span id="tf-error-text"></span>
-  </div>
-    <script>
-      var tforce_config = {
-        campaign: 'lofgren-nsa-dial'
-      };
-    </script>
-          <form method="post" action="" class="email-signup" role="form" autocomplete="on">
-            <fieldset>
-            	<label style="color: #444;" for="userEmail">
-            		Your email
-            	</label>
-          	  <input type="text"  placeholder="YOUR EMAIL" name="email"  id="userEmail" x-autocompletetype="email">
-
-
-              <input type="hidden" class="org-slug" name="org" value="" />
-              <label style="color: #444;">
-                Signup for emails from <span class="org-name"></span> (<a class="org-privacy int-privacy-policy-link" href="">privacy policy</a>)
-              </label>
-
-
-                <input id="submit" type="submit" value="Take action >>" class="">
-
-            </fieldset>
-            <span id="error-text"></span>
-          </form>
-
-
-      </div>
-    </div>
-
-  </div>
-    </section>
+    
 
     <section id="footer" class="container content-section text-center">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
-                <p><a href="privacy.html">Privacy policy</a></p>
+                <p>This site was created and run by Taskforce, and operates under the Taskforce's <a href="privacy.html">privacy policy</a></p>
             </div>
         </div>
     </section>
 
     <div class="floating-share" style="">
       <div class="share-buttons">
-         <a data-network="twitter" href="http://shutthebackdoor.net" count="0" target="_blank" class="twitter-button social-count" >
-             <div class="sicon" id="stwit"></div>
+
+         <a data-network="twitter" href="https://twitter.com/intent/tweet?status=A%20critical%20vote%20happening%20TODAY%20in%20Congress%20could%20put%20a%20stop%20to%20backdoor%20Internet%20surveillance.%20-%3E%20https%3A%2F%2Fshutthebackdoor.net&related=eff,tfrce" count="0" target="_blank" class="twitter-button social-count twlinkthis" >
+         <div class="sicon" id="stwit"></div>
          </a>
-         <a href="http://shutthebackdoor.net" data-network="facebook" count="0" target="_blank" class="social-count facebook-button">
+             <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fshutthebackdoor.net%2F&display=popup" data-network="facebook" count="0" target="_blank" class="social-count facebook-button fblinkthis">
              <div class="sicon" id="sfb"></div>
          </a>
-         <a count="0" href="http://shutthebackdoor.net" data-network="googleplus" target="_blank" class="social-count google-button">
+         <a count="0" href="https://plus.google.com/share?url=https://shutthebackdoor.net" data-network="googleplus" target="_blank" class="social-count google-button gpluslinkthis">
            <div class="sicon" id="sgplus"></div>
          </a>
        </div>
