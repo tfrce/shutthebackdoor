@@ -23,7 +23,7 @@ $(function() {
 /* ==========================================================================
    Social counts
    ==========================================================================*/
-var shareUrl = 'https://thedaywefightback.org';
+var shareUrl = 'https://shutthebackdoor.net';
 $.ajax('https://d28jjwuneuxo3n.cloudfront.net/?networks=facebook,twitter,googleplus&url=' + shareUrl, {
     success: function(res, err) {
         $.each(res, function(network, value) {
@@ -205,7 +205,7 @@ $(document).ready(function(){
 
 
             logDataFallback({data: $form.serializeObject()});
-  $('input,button', $form).attr('disabled', 'disabled');          
+  $('input,button', $form).attr('disabled', 'disabled');
 //$('#thank-you-message').append("<p> Thanks for signing up! </p>");
 //$form.remove();
 //$('.disclaimer').remove();
