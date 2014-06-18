@@ -176,6 +176,7 @@ if (!Object.keys) {
         });
       }
     }
+});
     /*
 $(document).ready(function(){
    var $form = $('.email-signup');
