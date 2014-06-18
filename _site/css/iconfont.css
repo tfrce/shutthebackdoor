@@ -50,16 +50,34 @@
 	content: "\f0c9";
 }
 
-#share-buttons {
+.share-buttons {
 		height: 100px;
 		margin-bottom: 50px;
+		display: none;
 }
-#share-buttons a {
+.share-buttons a {
 		margin:4px;
 		width:54px;
 		height:54px;
 		z-index: 0;
 		margin-top: 40px;
+}
+.floating-share {
+	position: fixed;
+	top: 100px;
+	left: 20px;
+	width: 100px;
+	height: 100px;
+}
+@media all and (min-width: 992px) {
+	.floating-share .share-buttons {
+		display: block;
+	}
+}
+@media all and (max-width: 992px) {
+	#call .share-buttons {
+		display: block;
+	}
 }
 .sicon {
 		float: left;
@@ -68,7 +86,7 @@
 		background-color:black;
 		background-image: url("../img/social-icons.png");
 }
-#share-buttons .sicon {
+.share-buttons .sicon {
 		margin-top: 2px;
 
 }
