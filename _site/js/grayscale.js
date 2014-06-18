@@ -80,94 +80,117 @@ if (!Object.keys) {
 
 (function() {
 
-    var referalMap = {
-        'fp': {
-            name: 'Free Press',
-            policy: 'http://www.freepress.net/privacy-copyright'
-        },
-        'fftf': {
-            name: 'Fight for the Future',
-            policy: 'http://www.fightforthefuture.org/privacy/'
-        },
-        'eff': {
-            name: 'EFF',
-            policy: 'https://www.eff.org/policy'
-        },
-        'an': {
-            name: 'Access Now',
-            policy: 'https://www.accessnow.org/pages/privacy-policy'
-        },
-        'dp': {
-            name: 'Demand Progress',
-            policy: 'http://www.demandprogress.org/privacy/'
-        },
-        'om': {
-            name: 'Open Media',
-            policy: 'https://openmedia.ca/privacy'
-        },
-        'ra': {
-            name: 'RootsAction',
-            policy: 'http://www.rootsaction.org/privacy-policy'
-        },
-        'o98': {
-            name: 'The Other 98%',
-            policy: 'http://other98.com/privacy/'
-        },
-        'dk': {
-            name: 'Daily Kos',
-            policy: 'http://www.dailykos.com/special/privacy'
-        },
-        'ca': {
-            name: 'Credo Action',
-            policy: 'http://credoaction.com/privacy/'
-        },
-        'aclu': {
-            name: 'ACLU',
-            policy: 'https://www.aclu.org/american-civil-liberties-union-privacy-statement'
-        },
-        'pda': {
-            name: 'Progressive Democrats of America',
-            policy: 'http://www.pdamerica.org/about-pda/privacy-policy'
-        },
-        'of': {
-            name: 'Campaign for America\'s Future',
-            policy: 'http://ourfuture.org/privacy'
-        }
-    };
-    var referalKeys = Object.keys(referalMap);
-    var referalParam = getParameterByName('r');
-    var referalOrg;
-    var slug;
 
-    // Allows a page to have a selected org always
-    if(typeof alwaysSelected !== 'undefined') {
-        referalParam = alwaysSelected;
-    }
 
-    if (referalParam in referalMap) {
-      referalOrg = referalMap[referalParam];
-      slug = referalParam;
-    } else {
-      var randomOrgIndex = Math.floor(Math.random() * referalKeys.length);
-      referalOrg = referalMap[referalKeys[randomOrgIndex]];
-      slug = referalKeys[randomOrgIndex];
-    }
-    $('.org-name').text(referalOrg.name);
-    $('.org-slug').val(slug);
-    $('.org-privacy').attr('href', referalOrg.policy);
-    if(slug === 'eff') {
-      $('#subscriber-checkbox').removeAttr('checked');
-    }
 
+})();
+$(document).ready(function(){
+
+  var referalMap = {
+      'fp': {
+          name: 'Free Press',
+          policy: 'http://www.freepress.net/privacy-copyright'
+      },
+      'fftf': {
+          name: 'Fight for the Future',
+          policy: 'http://www.fightforthefuture.org/privacy/'
+      },
+      'eff': {
+          name: 'EFF',
+          policy: 'https://www.eff.org/policy'
+      },
+      'an': {
+          name: 'Access Now',
+          policy: 'https://www.accessnow.org/pages/privacy-policy'
+      },
+      'dp': {
+          name: 'Demand Progress',
+          policy: 'http://www.demandprogress.org/privacy/'
+      },
+      'om': {
+          name: 'Open Media',
+          policy: 'https://openmedia.ca/privacy'
+      },
+      'ra': {
+          name: 'RootsAction',
+          policy: 'http://www.rootsaction.org/privacy-policy'
+      },
+      'o98': {
+          name: 'The Other 98%',
+          policy: 'http://other98.com/privacy/'
+      },
+      'dk': {
+          name: 'Daily Kos',
+          policy: 'http://www.dailykos.com/special/privacy'
+      },
+      'ca': {
+          name: 'Credo Action',
+          policy: 'http://credoaction.com/privacy/'
+      },
+      'aclu': {
+          name: 'ACLU',
+          policy: 'https://www.aclu.org/american-civil-liberties-union-privacy-statement'
+      },
+      'pda': {
+          name: 'Progressive Democrats of America',
+          policy: 'http://www.pdamerica.org/about-pda/privacy-policy'
+      },
+      'of': {
+          name: 'Campaign for America\'s Future',
+          policy: 'http://ourfuture.org/privacy'
+      }
+  };
+  var referalKeys = Object.keys(referalMap);
+  var referalParam = getParameterByName('r');
+  var referalOrg;
+  var slug;
+
+  // Allows a page to have a selected org always
+  if(typeof alwaysSelected !== 'undefined') {
+      referalParam = alwaysSelected;
+  }
+
+  if (referalParam in referalMap) {
+    referalOrg = referalMap[referalParam];
+    slug = referalParam;
+  } else {
+    var randomOrgIndex = Math.floor(Math.random() * referalKeys.length);
+    referalOrg = referalMap[referalKeys[randomOrgIndex]];
+    slug = referalKeys[randomOrgIndex];
+  }
+  $('.org-name').text(referalOrg.name);
+  $('.org-slug').val(slug);
+  $('.org-privacy').attr('href', referalOrg.policy);
+  if(slug === 'eff') {
+    $('#subscriber-checkbox').removeAttr('checked');
+  }
+
+  $.fn.serializeObject = function() {
+   var o = {};
+   var a = this.serializeArray();
+   $.each(a, function() {
+       if (o[this.name]) {
+           if (!o[this.name].push) {
+               o[this.name] = [o[this.name]];
+           }
+           o[this.name].push(this.value || '');
+       } else {
+           o[this.name] = this.value || '';
+       }
+   });
+   return o;
+ };
+   var $form = $('.email-signup');
     var emailLogged = false;
     var logDataFallback = function (data) {
+      console.log(data);
       if(!emailLogged) {
         emailLogged = true;
         var dbData = {
-          email: data.data['member[email]'],
-          org: data.data.tag
+          email: data.data.email,
+          org: slug
         };
-        $.ajax('https://email-congress.herokuapp.com/email', {
+        $.ajax('https://email-congress.herokuapp.com/shutthebackdoor', {
           data: dbData,
           method: 'POST',
           success: function(response){
@@ -176,41 +199,17 @@ if (!Object.keys) {
         });
       }
     }
-});
-    /*
-$(document).ready(function(){
-   var $form = $('.email-signup');
-
    $form.submit(function(){
 
      // Because there is no server side error handling, we can just assume success anyway
-     $('#thank-you-message').append("<p> Thanks for signing up! </p>");
-     $form.remove();
-     $('.disclaimer').remove();
 
-    // Make a timeout incase the request hangs
-    setTimeout(function () {
-      logDataFallback({data: $form.serializeObject()});
-    }, 5000)
 
-      $.ajax($(this).attr('action'), {
-        data: $(this).serialize(),
-        method: 'POST',
-        success: function(response){
-          if(response && response.data && response.data.success === true) {
-            emailLogged = true
-            // If success == true in response, proceed, otherwise log the data in case
-          } else {
             logDataFallback({data: $form.serializeObject()});
-          }
-        },
-        error: function () {
-          // if jQuery detects a http error, then log the data
-          logDataFallback({data: $form.serializeObject()});
-        },
-        dataType: 'json'
-      });
+  $('input,button', $form).attr('disabled', 'disabled');          
+//$('#thank-you-message').append("<p> Thanks for signing up! </p>");
+//$form.remove();
+//$('.disclaimer').remove();
       return false;
    });
-})();
-*/
+
+});
