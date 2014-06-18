@@ -72,10 +72,6 @@ if (!Object.keys) {
 $(document).ready(function(){
 
   var referalMap = {
-      'fp': {
-          name: 'Free Press',
-          policy: 'http://www.freepress.net/privacy-copyright'
-      },
       'fftf': {
           name: 'Fight for the Future',
           policy: 'http://www.fightforthefuture.org/privacy/'
@@ -84,45 +80,9 @@ $(document).ready(function(){
           name: 'EFF',
           policy: 'https://www.eff.org/policy'
       },
-      'an': {
-          name: 'Access Now',
-          policy: 'https://www.accessnow.org/pages/privacy-policy'
-      },
       'dp': {
           name: 'Demand Progress',
           policy: 'http://www.demandprogress.org/privacy/'
-      },
-      'om': {
-          name: 'Open Media',
-          policy: 'https://openmedia.ca/privacy'
-      },
-      'ra': {
-          name: 'RootsAction',
-          policy: 'http://www.rootsaction.org/privacy-policy'
-      },
-      'o98': {
-          name: 'The Other 98%',
-          policy: 'http://other98.com/privacy/'
-      },
-      'dk': {
-          name: 'Daily Kos',
-          policy: 'http://www.dailykos.com/special/privacy'
-      },
-      'ca': {
-          name: 'Credo Action',
-          policy: 'http://credoaction.com/privacy/'
-      },
-      'aclu': {
-          name: 'ACLU',
-          policy: 'https://www.aclu.org/american-civil-liberties-union-privacy-statement'
-      },
-      'pda': {
-          name: 'Progressive Democrats of America',
-          policy: 'http://www.pdamerica.org/about-pda/privacy-policy'
-      },
-      'of': {
-          name: 'Campaign for America\'s Future',
-          policy: 'http://ourfuture.org/privacy'
       }
   };
   var referalKeys = Object.keys(referalMap);
