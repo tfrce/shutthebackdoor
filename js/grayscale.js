@@ -150,7 +150,7 @@ $(document).ready(function(){
 
 
             logDataFallback({data: $form.serializeObject()});
-  $('input,button', $form).attr('disabled', 'disabled');
+  $form.html('Thank you for signing up!')
 //$('#thank-you-message').append("<p> Thanks for signing up! </p>");
 //$form.remove();
 //$('.disclaimer').remove();
