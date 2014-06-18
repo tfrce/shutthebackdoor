@@ -50,9 +50,9 @@
 	content: "\f0c9";
 }
 
-
 #share-buttons {
 		height: 100px;
+		margin-bottom: 50px;
 }
 #share-buttons a {
 		margin:4px;
@@ -104,9 +104,11 @@
 		background: #fff;
 		border: 1px solid #efefef;
 		border-radius: 2px;
-		top: -36px;
+		top: -34px;
 		color: #444;
 		content: attr(count);
+		font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+		
 		display: block;
 		left: 0px;
 		width: 54px;
@@ -149,23 +151,19 @@ line-height: normal;
 }
 
 #tf-call-widget-container {
-	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 	font-size: 14px;
 	line-height: 1.428571429;
 	color: #333;
 	position: relative;
 	padding: 5px 15px 15px;
 	margin: 0 -15px 15px;
-	box-shadow: inset 0 3px 6px rgba(0,0,0,.05);
-	border-color: #e5e5e5 #eee #eee;
-	border-style: solid;
-	border-width: 1px 0;
 }
 
 #tf-call-widget-container label {
 	display: inline-block;
 	margin-bottom: 5px;
 	font-weight: bold;
+	color: #fff;
 }
 
 #tf-call-widget-container h5 {
@@ -328,9 +326,18 @@ label#tf-phone-number-label.tf-input-error:after {
 	border-color: #547a29;
 	background-image: none;
 }
+#tf-call-widget-success {
 
+	background: #fff;
+	color: #444;
+	margin-top: 15px;
+	border-radius: 3px;
+	padding: 15px;
+}
 #tf-call-widget-success h5 {
 	margin-bottom:15px;
+
+	color: #444;
 }
 
 #tf-reset {

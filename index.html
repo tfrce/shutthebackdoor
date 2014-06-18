@@ -131,23 +131,33 @@
     <section id="call" class="container content-section text-center">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
+              <div id="share-buttons">
+                 <a data-network="twitter" href="" count="0" target="_blank" class="twitter-button social-count" >
+                     <div class="sicon" id="stwit"></div>
+                 </a>
+                 <a href="" data-network="facebook" count="0" target="_blank" class="social-count facebook-button">
+                     <div class="sicon" id="sfb"></div>
+                 </a>
+                 <a count="0" href="" data-network="googleplus" target="_blank" class="social-count google-button">
+                   <div class="sicon" id="sgplus"></div>
+                 </a>
+               </div>
                 <h2>Call Now: It only takes 2 minutes</h2>
                 <p>Enter your phone number below and we'll call and connect you to your representatives, and you can tell them to support the two amendments tomorrow.</p>
 
                 <div id="tf-call-widget-container">
                   <div id="tf-call-widget-form">
-                    <h5>Call Your Legislators</h5>
                     <form method="get" action="https://call-congress.taskforce.is/create" id="tf-call-tool" role="form">
                         <label for="tf-phone-number" id="tf-phone-number-label">Phone Number</label>
                         <input type="text" id="tf-phone-number">
                         <input id="tf-submit" type="Submit" data-waiting-text="Calling Now" value="Call Now">
                     </form>
                   </div>
-                  <div id="tf-call-widget-success" style="display: none;">
+                  <div id="tf-call-widget-success">
                     <h5>What to say</h5>
                        <p>Hi, I'm one of Representative/Senator _______'s constituents, and I'm calling  to oppose Fast Track for the Trans-Pacific Partnership agreement. Congress needs time to debate and amend trade agreements that affect all of us. Fast Tracking the TPP is undemocratic, and I expect my lawmakers to oppose it. I'll be watching this issue closely in 2014.</p>
                       <p><strong>You can press * at any time to hang up and call the next representative.</strong></p>
-                      <p id="tf-reset">Call didn't come through? Try again.</p>
+                      <!--<p id="tf-reset">Call didn't come through? Try again.</p>-->
                     </div>
                     <span id="tf-error-text"></span>
                   </div>
@@ -156,23 +166,23 @@
                     campaign: 'lofgren-nsa-dial'
                   };
                 </script>
-                 <div id="share-buttons">
-                    <a data-network="twitter" href="" count="0" target="_blank" class="twitter-button social-count" >
-                        <div class="sicon" id="stwit"></div>
-                    </a>
-                    <a href="" data-network="facebook" count="0" target="_blank" class="social-count facebook-button">
-                        <div class="sicon" id="sfb"></div>
-                    </a>
-                    <a count="0" href="" data-network="googleplus" target="_blank" class="social-count google-button">
-                      <div class="sicon" id="sgplus"></div>
-                    </a>
-                  </div>
+
             </div>
         </div>
     </section>
-
-    <div id="map"></div>
-
+    <div style="position: fixed; top: 100px; left: 20px;width: 100px; height: 100px;">
+      <div id="share-buttons">
+         <a data-network="twitter" href="" count="0" target="_blank" class="twitter-button social-count" >
+             <div class="sicon" id="stwit"></div>
+         </a>
+         <a href="" data-network="facebook" count="0" target="_blank" class="social-count facebook-button">
+             <div class="sicon" id="sfb"></div>
+         </a>
+         <a count="0" href="" data-network="googleplus" target="_blank" class="social-count google-button">
+           <div class="sicon" id="sgplus"></div>
+         </a>
+       </div>
+    </div>
     <!-- Core JavaScript Files -->
     <script src="js/jquery-1.10.2.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
